@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Diese Webseite befindet sich im Aufbau.">
 <title>Webseite im Aufbau</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- ===================== ANGABEN (hier anpassen) ===================== -->
 <script>
@@ -32,7 +29,8 @@
   html, body { height: 100%; }
   body {
     margin: 0; background: var(--weiss); color: var(--text);
-    font-family: "Avenir Next", "Avenir", "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
+    /* keine Schrift von fremden Servern: Avenir auf Apple-Geräten, sonst Systemschrift */
+    font-family: "Avenir Next", "Avenir", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     font-size: 17px; line-height: 1.65;
     display: flex; flex-direction: column;
   }
