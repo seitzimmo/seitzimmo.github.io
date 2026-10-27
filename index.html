@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Immobilienmanagement in Nürnberg, München und ganz Bayern. Diese Webseite befindet sich im Aufbau.">
-<title>Immobilienmanagement in Nürnberg und München</title>
+<meta name="description" content="Diese Webseite befindet sich im Aufbau.">
+<title>Webseite im Aufbau</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!-- ===================== GLOBALE ANGABEN (hier anpassen) ===================== -->
+<!-- ===================== ANGABEN (hier anpassen) ===================== -->
 <script>
   const DATEN = {
-    firmenname: "Seitz Immobilien",
-    bild:       "images/image_1.jpeg"   // das runde Bild in der Mitte (Datei im Ordner images/)
+    bild: "images/image_1.jpeg"   // das runde Bild in der Mitte (Datei im Ordner images/)
   };
 </script>
 
@@ -42,13 +41,6 @@
     height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--weiss);
   }
 
-  /* ===== Kopfzeile ===== */
-  .kopf { background: var(--weiss); border-bottom: 1px solid var(--stein); }
-  .kopf-innen { max-width: 1200px; height: 76px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; }
-  .logo { display: flex; flex-direction: column; line-height: 1.15; color: var(--text); text-decoration: none; }
-  .logo strong { font-size: 1.4rem; font-weight: 500; letter-spacing: .02em; }
-  .logo span { font-size: .82rem; color: var(--text-leise); }
-
   /* ===== Mitte ===== */
   main {
     flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -67,12 +59,6 @@
 </head>
 <body>
 
-<header class="kopf">
-  <div class="kopf-innen">
-    <a class="logo" href="#"><strong data-wert="firmenname"></strong><span>Immobilienmanagement in Bayern</span></a>
-  </div>
-</header>
-
 <main>
   <div class="rund" role="img" aria-label="Bild"></div>
   <div class="text">
@@ -82,9 +68,7 @@
 </main>
 
 <script>
-  document.querySelectorAll("[data-wert]").forEach(e => { e.textContent = DATEN[e.dataset.wert]; });
   document.querySelector(".rund").style.backgroundImage = 'url("' + DATEN.bild + '")';
-  document.title = DATEN.firmenname + " – Immobilienmanagement";
 </script>
 </body>
 </html>
